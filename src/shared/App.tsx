@@ -5,7 +5,7 @@ import { history } from "../redux/configureStore";
 import styled from "styled-components";
 import { createGlobalStyle } from "styled-components";
 //import ScrollToTop from "./ScrollToTop";
-import Main from "../pages/Main";
+import MainPage from "../pages/MainPage";
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
       <GlobalStyle />
       <ConnectedRouter history={history}>
           <Switch>
-            <Route path="/" exact component={Main} />
+            <Route path="/" exact component={MainPage} /> 
           </Switch>
       </ConnectedRouter>
     </ReactContainer>

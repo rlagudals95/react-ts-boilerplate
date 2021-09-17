@@ -1,4 +1,4 @@
-const getCookie = (name) => {
+const getCookie = (name:string):string => {
   let value = "; " + document.cookie;
 
   let parts = value.split(`; ${name}=`);
@@ -8,7 +8,7 @@ const getCookie = (name) => {
   }
 };
 
-const setCookie = (name, value, exp = 5) => {
+const setCookie = (name:string, value, exp = 5) => {
   let date = new Date();
   date.setTime(date.getTime() + exp * 24 * 60 * 60 * 1000);
 
