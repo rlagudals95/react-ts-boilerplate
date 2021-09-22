@@ -6,15 +6,22 @@ import styled from "styled-components";
 import { createGlobalStyle } from "styled-components";
 //import ScrollToTop from "./ScrollToTop";
 import MainPage from "../pages/MainPage";
+import Header from "../components/Header"
+import Footer from "../components/Footer"
+import '../style/App.css'
+
 
 function App() {
   return (
     <ReactContainer>
-      <GlobalStyle />
+    
       <ConnectedRouter history={history}>
-          <Switch>
-            <Route path="/" exact component={MainPage} /> 
-          </Switch>
+        <Switch>
+          <Header />
+          <Footer/>
+          <Route path="/" exact component={MainPage} />
+          
+        </Switch>
       </ConnectedRouter>
     </ReactContainer>
   );
@@ -30,12 +37,14 @@ body{
   margin: 0 0 0 0;
   padding: 0;
   box-sizing: border-box;
+  background: url("../assets/paper-background.jpg") center/cover no-repeat;
 }`;
 
 const ReactContainer = styled.div`
-  background-color: #fafafa;
+  height: 100%;
   width: 100%;
   overflow-x: hidden;
   padding: 0;
   box-sizing: border-box;
+  background: url("../assets/paper-background.jpg") center/cover no-repeat;
 `;

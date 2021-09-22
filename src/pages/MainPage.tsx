@@ -2,7 +2,7 @@ import React from "react";
 import { Grid, Image, Input, Text } from "../elements";
 import { history } from "../redux/configureStore";
 import styled, { keyframes } from "styled-components";
-import "../index.css";
+import "../style/index.css";
 //import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 //폰트를 테마형태로 덮어씌워서 보여줄 수 있음
 import { useDispatch, useSelector } from "react-redux";
@@ -22,11 +22,17 @@ const Main = (props) => {
 
   return (
   
-    <React.Fragment>
-      <div>main page</div>
-    </React.Fragment>
+    <MainContainer>
+      dd
+    </MainContainer>
     
   );
 };
 
 export default Main;
+
+const MainContainer = styled.div`
+  width: 100%;
+  height: 100%;
+  background: url("../assets/paper-background.jpg") center/cover no-repeat;
+`
